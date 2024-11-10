@@ -22,4 +22,4 @@ class modelFactory:
 
 
 model_factory = modelFactory() 
-model_factory.register_model("WordVec", WordVecModel)
+model_factory.register_model("WORD2VEC", WordVecModel)

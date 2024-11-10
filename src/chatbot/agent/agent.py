@@ -23,16 +23,22 @@ class Agent:
         pass
 
     # training and responding: -----------------------------
-    def train(self, model_name, model_params, retrain=False):
+    def train(self, model_name, model_params, update=False):
         ''' train the model indicated with current corpus '''
-        modelInit = model_factory.get_model(model_name)
-        model = modelInit(model_params, self.corpus)
-        model.train()
-        self.models[model_name] = model
+        if not update: 
+            modelInit = model_factory.get_model(model_name)
+            model = modelInit(model_params, self.corpus)
+            model.train()
+            self.models[model_name] = model
+
+        else:
+            model = self.models[model_name]
+            model.update() 
 
     def record_response(self, txt):
         '''record response given to the corpus'''
         self.corpus.add_text(txt)
+        self.corpus.update_texts() 
 
     def clear_corpus(self):
         '''clear the corpus '''
