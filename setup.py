@@ -14,8 +14,8 @@ setup(
         description=DESCRIPTION,
         long_description=LONG_DESCRIPTION,
         package_dir={'':'src'},
-        packages=find_packages(where='src'),
-        install_requires=['scikit-learn', 'nltk', 'gensim'], # add any additional packages that 
+        packages=find_packages(where=['src', 'frontends']),
+        install_requires=['scikit-learn', 'nltk', 'gensim', 'tensorflow'], # add any additional packages that 
         # needs to be installed along with your package. Eg: 'caer'
 
         keywords=['python', 'chat'],
