@@ -1,11 +1,18 @@
-# chatbot
-Initial development of a chatbot 
+# GrootSpeaks
+Initial development of a chatbot. Having fun with learning more about LLMs. 
 
-GrootSpeaks - develop a bot that learns a wide range of words starting with just 'I am Groot.' like the Guardian of the Galaxy character. 
+GrootSpeaks - named with the ultimate goal of developing a bot that learns a wide range of words starting with just 'I am Groot.' like the Guardian of the Galaxy character. 
 
-Corpus:
-* Corpus is stored as a list of raw strings (for now) 
-* eventually I would like to have a way of looking up docs as json format 
+Agent:
+* Agent is the object that calls other object's actions.
+* Librarian is the object that manages data needs. 
+
+Model: 
+* This module holds the various types of models used to generate text
+
+Preprocess:
+* Corpus stores working text to be added to the model and calls the processors 
+* tokenstem - tokenizes courpus text
 
 
 
